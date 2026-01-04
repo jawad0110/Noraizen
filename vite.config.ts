@@ -6,7 +6,12 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-    host: true, // allows external access
+    host: true,
+    port: Number(process.env.PORT) || 4000,
+    allowedHosts: ["noraizen.onrender.com"],
+  },
+  preview: {
+    host: true,
     port: Number(process.env.PORT) || 4000,
     allowedHosts: ["noraizen.onrender.com"],
   },
@@ -17,5 +22,6 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+
 
 
