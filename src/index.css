@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
+
+/* Noraizen Design System - Executive Command Center Theme */
+
+@layer base {
+  :root {
+    /* Deeper, more sophisticated Dark Theme Palette */
+    --background: 0 0% 4%;
+    --foreground: 210 36% 96%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 210 36% 96%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 210 36% 96%;
+
+    --primary: 212 85% 66%;
+    --primary-foreground: 210 36% 96%;
+
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 210 36% 96%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 174 65% 55%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 36% 96%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 212 85% 66%;
+
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --slate: 215 20% 65%;
+    --charcoal: 0 0% 12%;
+    --smoke: 0 0% 15%;
+    --ivory: 210 36% 96%;
+    --success: 174 65% 55%;
+    --info: 212 85% 66%;
+
+    /* Enhanced shadows for dark theme */
+    --shadow-glow: 0 0 20px -5px hsla(174, 65%, 55%, 0.3);
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 142 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 90%;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 0% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .executive-card {
+    @apply bg-card border border-border rounded-2xl;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .executive-card-elevated {
+    @apply bg-card border border-border rounded-3xl;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-2xl;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .glow-border {
+    @apply relative after:absolute after:inset-0 after:rounded-[inherit] after:border after:border-accent/30 after:pointer-events-none;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .badge-glow {
+    @apply relative;
+
+    &::before {
+      content: '';
+      @apply absolute -inset-4 bg-accent/20 blur-2xl rounded-full opacity-0 transition-opacity duration-500;
+    }
+
+    &:hover::before {
+      @apply opacity-100;
+    }
+  }
+
+  /* Grid Pattern Utilities */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Enhanced dot grid pattern */
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Large grid pattern for more prominent effect */
+  .bg-grid-large {
+    background-image:
+      linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .grid-lines-horizontal {
+    @apply absolute inset-0 pointer-events-none;
+    background-image: repeating-linear-gradient(0deg,
+        transparent,
+        transparent 79px,
+        hsl(var(--primary) / 0.08) 79px,
+        hsl(var(--primary) / 0.08) 80px);
+    animation: grid-slide-vertical 20s linear infinite;
+  }
+
+  .grid-lines-vertical {
+    @apply absolute inset-0 pointer-events-none;
+    background-image: repeating-linear-gradient(90deg,
+        transparent,
+        transparent 79px,
+        hsl(var(--primary) / 0.08) 79px,
+        hsl(var(--primary) / 0.08) 80px);
+    animation: grid-slide-horizontal 20s linear infinite;
+  }
+
+  .section-alt {
+    @apply bg-secondary;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(212 85% 66%) 0%, hsl(168 53% 52%) 100%);
+  }
+
+  .gradient-text-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(168 53% 52%) 0%, hsl(168 53% 65%) 100%);
+  }
+
+  .section-dark {
+    @apply bg-foreground text-background;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-dark {
+    @apply bg-foreground/5 text-foreground border border-foreground/10;
+  }
+
+  .badge-accent {
+    @apply bg-accent/10 text-accent;
+  }
+
+  .container-tight {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+/* Radial Orbital Timeline Styles */
+
+/* Animation for the pulsing effect */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation for the ping effect */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Custom animations for the orbital timeline */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+/* Backdrop blur */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+/* Custom gradients */
+.bg-gradient-orbital {
+  background: linear-gradient(to bottom right, #6366f1, #3b82f6, #14b8a6);
+}
+
+/* Z-index utilities */
+.z-10 {
+  z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+/* Custom shadows */
+.shadow-orbital {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Custom transforms */
+.scale-125 {
+  transform: scale(1.25);
+}
+
+.scale-150 {
+  transform: scale(1.5);
+}
+
+/* Custom opacity values */
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+/* Custom border opacity */
+.border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.border-white\/30 {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.border-white\/40 {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom background opacity */
+.bg-black\/90 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bg-white\/50 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom text opacity */
+.text-white\/70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-white\/80 {
+  color: rgba(255, 255, 255, 0.8);
+}
