@@ -32,7 +32,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-accent/30 blur-2xl rounded-full scale-110 animate-pulse pointer-events-none" />
 
             <span className="relative z-10 bg-white/[0.08] backdrop-blur-2xl border border-white/20 px-5 py-2.5 rounded-full text-sm font-medium tracking-wide flex items-center gap-2.5 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-              <span className="w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_10px_rgba(67,198,172,0.8)] animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_10px_rgba(95,163,242,0.8)] animate-pulse" />
               Coming Soon to iOS & Android
             </span>
           </motion.div>
@@ -199,3 +199,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
