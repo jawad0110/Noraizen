@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap');
 
 /* Noraizen Design System - Executive Command Center Theme */
 
@@ -401,5 +401,6 @@
 .text-white\/80 {
   color: rgba(255, 255, 255, 0.8);
 }
+
 
 
