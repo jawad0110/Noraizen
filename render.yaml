@@ -2,9 +2,10 @@ services:
   - type: web
     name: noraizen-portfolio
     env: static
-    buildCommand: npm install && npm run build
+    buildCommand: pm install --legacy-peer-deps && npm run build
     staticPublishPath: ./dist
     headers:
       - path: /*
         name: Cache-Control
         value: "public, max-age=31536000, immutable"
+
