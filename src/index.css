@@ -27,7 +27,7 @@
     --muted: 0 0% 12%;
     --muted-foreground: 210 20% 70%;
 
-    --accent: 174 65% 55%;
+    --accent: 212 85% 66%;
     --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84% 60%;
@@ -401,3 +401,4 @@
 .text-white\/80 {
   color: rgba(255, 255, 255, 0.8);
 }
+
