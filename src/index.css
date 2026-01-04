@@ -44,11 +44,11 @@
     --charcoal: 0 0% 12%;
     --smoke: 0 0% 15%;
     --ivory: 210 36% 96%;
-    --success: 174 65% 55%;
+    --success: 212 85% 66%;
     --info: 212 85% 66%;
 
     /* Enhanced shadows for dark theme */
-    --shadow-glow: 0 0 20px -5px hsla(174, 65%, 55%, 0.3);
+    --shadow-glow: 0 0 20px -5px hsla(212, 85%, 66%, 0.3);
   }
 
   .dark {
@@ -401,4 +401,5 @@
 .text-white\/80 {
   color: rgba(255, 255, 255, 0.8);
 }
+
 
