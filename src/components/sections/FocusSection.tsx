@@ -20,7 +20,7 @@ const FocusSection = () => {
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
+                  <div className="w-3 h-3 rounded-full bg-blue-400" />
                 </div>
                 <div className="flex-1 text-center">
                   <span className="text-xs text-muted-foreground">Focus Mode</span>
@@ -95,9 +95,8 @@ const FocusSection = () => {
                   {[...Array(10)].map((_, i) => (
                     <div
                       key={i}
-                      className={`flex-1 h-8 rounded ${
-                        i < 7 ? "bg-primary/60" : "bg-muted-foreground/10"
-                      }`}
+                      className={`flex-1 h-8 rounded ${i < 7 ? "bg-primary/60" : "bg-muted-foreground/10"
+                        }`}
                       style={{ height: `${20 + (i < 7 ? i * 4 : 0)}px` }}
                     />
                   ))}
@@ -123,13 +122,13 @@ const FocusSection = () => {
               <Target className="w-4 h-4" />
               <span>Focus Mode</span>
             </div>
-            
+
             <h2 className="text-headline-sm md:text-headline font-bold mb-6">
               Deep work engine
             </h2>
-            
+
             <p className="text-muted-foreground text-body-lg mb-8 leading-relaxed">
-              A distraction-free environment designed for deep focus. Customizable Pomodoro 
+              A distraction-free environment designed for deep focus. Customizable Pomodoro
               sessions with a unique visual journey that makes productivity tangible.
             </p>
 

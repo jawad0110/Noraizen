@@ -39,7 +39,7 @@ const BlocksSection = () => {
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-400" />
                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                    <div className="w-3 h-3 rounded-full bg-blue-400" />
                   </div>
                   <span className="text-xs text-muted-foreground ml-2">Study Space / Tasks</span>
                 </div>
@@ -82,8 +82,8 @@ const BlocksSection = () => {
                       </div>
                     </div>
                     <span className={`text-xs px-2 py-0.5 rounded-full ${item.priority === "High" ? "bg-red-500/10 text-red-500" :
-                        item.priority === "Medium" ? "bg-yellow-500/10 text-yellow-600" :
-                          "bg-primary/10 text-primary"
+                      item.priority === "Medium" ? "bg-yellow-500/10 text-yellow-600" :
+                        "bg-primary/10 text-primary"
                       }`}>
                       {item.priority}
                     </span>

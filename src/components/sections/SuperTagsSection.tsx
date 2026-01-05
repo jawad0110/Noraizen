@@ -17,13 +17,13 @@ const SuperTagsSection = () => {
               <Tag className="w-4 h-4" />
               <span>SuperTags</span>
             </div>
-            
+
             <h2 className="text-headline-sm md:text-headline font-bold mb-6">
               Intelligent knowledge linking
             </h2>
-            
+
             <p className="text-muted-foreground text-body-lg mb-8 leading-relaxed">
-              SuperTags are not simple labels — they're live knowledge hubs that link related 
+              SuperTags are not simple labels — they're live knowledge hubs that link related
               Blocks across all Spaces. One click to see everything tied to a topic.
             </p>
 
@@ -67,7 +67,7 @@ const SuperTagsSection = () => {
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
+                  <div className="w-3 h-3 rounded-full bg-blue-400" />
                 </div>
                 <div className="flex-1 text-center">
                   <span className="text-xs text-muted-foreground">Graph View — #Study</span>
@@ -151,9 +151,8 @@ const SuperTagsSection = () => {
                   {["#Study", "#Math", "#Research", "#Exams", "#Notes"].map((tag, i) => (
                     <span
                       key={tag}
-                      className={`px-2.5 py-1 rounded-full text-xs font-medium ${
-                        i === 0 ? "bg-purple-500/10 text-purple-500" : "bg-muted text-muted-foreground"
-                      }`}
+                      className={`px-2.5 py-1 rounded-full text-xs font-medium ${i === 0 ? "bg-purple-500/10 text-purple-500" : "bg-muted text-muted-foreground"
+                        }`}
                     >
                       {tag}
                     </span>
