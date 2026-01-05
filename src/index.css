@@ -70,7 +70,7 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 55%;
 
-    --accent: 142 60% 50%;
+    --accent: 212 85% 66%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
@@ -188,12 +188,12 @@
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(212 85% 66%) 0%, hsl(168 53% 52%) 100%);
+    background-image: linear-gradient(135deg, hsl(212 85% 66%) 0%, hsl(212 85% 56%) 100%);
   }
 
   .gradient-text-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(168 53% 52%) 0%, hsl(168 53% 65%) 100%);
+    background-image: linear-gradient(135deg, hsl(212 85% 66%) 0%, hsl(212 85% 76%) 100%);
   }
 
   .section-dark {

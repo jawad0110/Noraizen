@@ -81,15 +81,14 @@ const BlocksSection = () => {
                         {item.task}
                       </div>
                     </div>
-                    <span className={`text-xs px-2 py-0.5 rounded-full ${
-                      item.priority === "High" ? "bg-red-500/10 text-red-500" :
-                      item.priority === "Medium" ? "bg-yellow-500/10 text-yellow-600" :
-                      "bg-green-500/10 text-green-500"
-                    }`}>
+                    <span className={`text-xs px-2 py-0.5 rounded-full ${item.priority === "High" ? "bg-red-500/10 text-red-500" :
+                        item.priority === "Medium" ? "bg-yellow-500/10 text-yellow-600" :
+                          "bg-primary/10 text-primary"
+                      }`}>
                       {item.priority}
                     </span>
                     <div className="w-16 h-1.5 rounded-full bg-muted-foreground/10 overflow-hidden">
-                      <div 
+                      <div
                         className="h-full bg-primary rounded-full transition-all"
                         style={{ width: `${item.progress}%` }}
                       />
@@ -125,13 +124,13 @@ const BlocksSection = () => {
               <LayoutGrid className="w-4 h-4" />
               <span>Blocks</span>
             </div>
-            
+
             <h2 className="text-headline-sm md:text-headline font-bold mb-6">
               Everything is a Block
             </h2>
-            
+
             <p className="text-muted-foreground text-body-lg mb-8 leading-relaxed">
-              Tasks, projects, notes, schedules, reports — all Blocks. Each Block acts as a 
+              Tasks, projects, notes, schedules, reports — all Blocks. Each Block acts as a
               smart database entry with customizable properties and multiple view options.
             </p>
 

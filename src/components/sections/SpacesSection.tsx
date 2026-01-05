@@ -91,7 +91,7 @@ const SpacesSection = () => {
                   { name: "Study", icon: "📚", color: "bg-blue-500/10 border-blue-500/20" },
                   { name: "Content", icon: "🎬", color: "bg-purple-500/10 border-purple-500/20" },
                   { name: "Startup", icon: "🚀", color: "bg-orange-500/10 border-orange-500/20" },
-                  { name: "Personal", icon: "🏠", color: "bg-green-500/10 border-green-500/20" },
+                  { name: "Personal", icon: "🏠", color: "bg-pink-500/10 border-pink-500/20" },
                 ].map((space, index) => (
                   <motion.div
                     key={space.name}

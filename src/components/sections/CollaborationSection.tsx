@@ -20,7 +20,7 @@ const CollaborationSection = () => {
             Work together, seamlessly
           </h2>
           <p className="text-muted-foreground text-body-lg max-w-2xl mx-auto">
-            Real-time collaboration inside shared Spaces. Designed for small teams and focused work, 
+            Real-time collaboration inside shared Spaces. Designed for small teams and focused work,
             not enterprise bloat.
           </p>
         </motion.div>
@@ -94,11 +94,10 @@ const CollaborationSection = () => {
                   {["A", "M", "K"].map((initial, i) => (
                     <div
                       key={i}
-                      className={`w-7 h-7 rounded-full border-2 border-card flex items-center justify-center text-[10px] font-medium ${
-                        i === 0 ? 'bg-primary text-primary-foreground' :
-                        i === 1 ? 'bg-accent text-accent-foreground' :
-                        'bg-muted text-muted-foreground'
-                      }`}
+                      className={`w-7 h-7 rounded-full border-2 border-card flex items-center justify-center text-[10px] font-medium ${i === 0 ? 'bg-primary text-primary-foreground' :
+                          i === 1 ? 'bg-accent text-accent-foreground' :
+                            'bg-muted text-muted-foreground'
+                        }`}
                     >
                       {initial}
                     </div>
@@ -113,7 +112,7 @@ const CollaborationSection = () => {
               <div className="p-5 space-y-4">
                 {/* Live Editing Indicator */}
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span>Alex is editing...</span>
                 </div>
 
